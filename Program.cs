@@ -54,33 +54,28 @@
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
 
-// int GetNum()
+// int[] GetNums()
 // {
-//     Console.WriteLine("Введите число, которое необходимо найти");
-//     int num = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите через запятую позицию элемента в духмерном массиве");
+//     int [] num =  Array.ConvertAll<string,int>(Console.ReadLine().Split(','), 
+//     elem => { return System.Convert.ToInt32 (elem);});
 //     return num;
 // }
 
-// string FindNum(int[,] arr, int num)
+// string FindNum(int[,] arr, int [] num)
 // {
-//    for (int i = 0; i < arr.GetLength(0); i++)
+//     if (num[0] < arr.GetLength(0) && num[1] < arr.GetLength(1))
 //     {
-//          for (int j = 0; j < arr.GetLength(1); j++)
-//         {
-//             if (num == arr[i,j])
-//             {
-//                 return Convert.ToString(num);
-//             }
-//         }
+//         return Convert.ToString(arr[num[0], num[1]]);
 //     }
-//     return "Такого числа в массиве нет";       
+//     else return "Такого элемента в массиве нет";      
 // }
 
 // int [,] array = {{1,4,7,2},
 //                  {5,9,2,3},
 //                  {8,4,2,4}};
 
-// Console.WriteLine(FindNum(array, GetNum()));
+// Console.WriteLine(FindNum(array, GetNums()));
 
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
@@ -90,19 +85,19 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-int [,] array = {{1,4,7,2},
-                 {5,9,2,3},
-                 {8,4,2,4}};
-double [] result = new double[array.GetLength(1)];
+// int [,] array = {{1,4,7,2},
+//                  {5,9,2,3},
+//                  {8,4,2,4}};
+// double [] result = new double[array.GetLength(1)];
 
-for (int i = 0; i < array.GetLength(1); i++)
-{
-    double sum = 0;
-    for (int j = 0; j < array.GetLength(0); j++)
-    {
-        sum += array[j,i];
-    }
-    result[i] = Math.Round(sum/array.GetLength(0), 1);
-}
+// for (int i = 0; i < array.GetLength(1); i++)
+// {
+//     double sum = 0;
+//     for (int j = 0; j < array.GetLength(0); j++)
+//     {
+//         sum += array[j,i];
+//     }
+//     result[i] = Math.Round(sum/array.GetLength(0), 1);
+// }
 
-Console.WriteLine($"Среднее арифметическое каждого столбца: {String.Join("; ", result)}");
+// Console.WriteLine($"Среднее арифметическое каждого столбца: {String.Join("; ", result)}");
