@@ -147,3 +147,18 @@
 // Console.WriteLine(sum1/4);
 // Console.WriteLine(sum2/4);
 // Console.WriteLine(sum3/4);
+
+// string ToCamelCase(string str)
+// {
+//     for (int i = 0; i < str.Length; i++)
+//     {
+//         if(Char.IsDigit(str[i])==false&&Char.IsLetter(str[i])==false)
+//         {                              
+//             str = str.Replace($"-{str[i+1]}", $"{Char.ToUpper(str[i+1])}");
+            
+//         }
+//     }
+//     return str;
+// }
+// string text = "привет-привет-пока-пока";
+// Console.WriteLine(ToCamelCase(text));
